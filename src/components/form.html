@@ -1,0 +1,35 @@
+<template>
+  <div x-init="init()" x-data="form()">
+    <template x-if="$store.app.curItem.id">
+      <div>
+        <label>Title</label>
+        <input type="text" class="form-control" placeholder="title" x-model="$store.app.curItem.title">
+
+        <label>Body</label>
+        <textarea class="form-control" placeholder="title" x-model="$store.app.curItem.body"></textarea>
+
+        <button type="button" class="btn-primary">Save</button>
+      </div>
+    </template>
+    <template x-if="!$store.app.curItem.id">
+      <div class="intro-alert">
+        <h3 class="title-h3">Welcome to BlogNote</h3>
+        <p>BlogNote is a simple micro-CMS that saves to your Github repo. Great for your SPA or Static Site Generator</p>
+      </div>
+    </template>
+  </div>
+</template>
+
+<script>
+  function form() {
+    return {
+      init() {
+        console.log('Form component loaded');
+      },
+    }
+  }
+</script>
+
+<style>
+
+</style>

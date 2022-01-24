@@ -1,0 +1,26 @@
+<template>
+  <nav x-init="init()" x-data="notify()">
+    <strong>Heads Up!</strong> Welcome to Blognote
+  </nav>
+</template>
+
+<script>
+  function notify() {
+    return {
+      init() {
+        console.log('Notify component loaded');
+      }
+    }
+  }
+</script>
+
+<style>
+  #notify {
+    border-radius: 0;
+    border-top: 0;
+  }
+
+  #notify span {
+    font-weight: bold;
+  }
+</style>

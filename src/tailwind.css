@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+  height: 100%;
+}
+
+.form-control {
+  @apply mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
+}
+
+textarea.form-control{
+ resize: none;
+ min-height: 250px;
+}
+
+.title-h2{
+  @apply text-4xl font-black leading-tight mb-6;
+}
+
+.title-h3{
+  @apply text-xl text-yellow-700 font-black leading-tight mb-2;
+}
+
+nav{
+  @apply bg-blue-500 p-1.5 text-white;
+}
+
+.sheet{
+  @apply border mt-10 drop-shadow-md bg-white rounded-md;
+}
+
+.active{
+  @apply bg-blue-500 text-white;
+}
+
+.side-tab{
+  @apply p-5 border-b block cursor-pointer select-none hover:bg-blue-500 hover:text-white;
+}
+
+label{
+  @apply text-sm tracking-wide mb-1 uppercase block;
+}
+
+.intro-alert{
+  @apply bg-yellow-100 rounded-lg p-4 mb-4 text-base text-yellow-700 border;
+}
+
+.btn-primary{
+  @apply text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+}

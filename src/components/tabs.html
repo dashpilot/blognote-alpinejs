@@ -1,0 +1,23 @@
+<template>
+  <div x-init="init()" x-data="tabs()">
+
+    <template x-for="item in $store.items">
+      <a class="side-tab" :class="{ 'active': $store.app.curItem.id == item.id }" @click="$store.app.curItem = item"><span class="ellipsis overflow-hidden block" style="white-space: nowrap; max-width: 190px;" x-text="item.title"></span></a>
+    </template>
+
+  </div>
+</template>
+
+<script>
+  function tabs() {
+    return {
+      init() {
+        console.log('Notify component loaded');
+      }
+    }
+  }
+</script>
+
+<style>
+
+</style>

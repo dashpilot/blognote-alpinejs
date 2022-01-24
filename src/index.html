@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <link href="tailwind.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-gray-100" spellcheck="false">
+
+  <!-- load the components -->
+  <nav></nav>
+
+
+  <div class="text-center mt-7">
+    <h2 class="title-h2">BlogNote</h2>
+  </div>
+
+  <div class="container mx-auto sheet flex flex-row min-h-[75%] overflow-hidden">
+
+    <div class="basis-1/4 border-r bg-gray-50">
+      <tabs></tabs>
+    </div>
+
+    <div class="basis-3/4 p-5">
+      <form></form>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('items', [{
+          id: "item-1",
+          title: "This is my first title",
+          body: "Lorem ipsum dolor site amet"
+        },
+        {
+          id: "item-2",
+          title: "This is my second title",
+          body: "Lorem ipsum dolor site amet depictum dolor site."
+        }
+      ])
+      Alpine.store('app', {
+        curItem: {},
+      })
+    })
+  </script>
+  <script src="assets/template.min.js"></script>
+  <script src="assets/app.min.js"></script>
+  <link href="assets/app.min.css" rel="stylesheet" />
+</body>
+
+</html>
