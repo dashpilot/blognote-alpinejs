@@ -10,9 +10,6 @@ const CleanCSS = require("clean-css");
 
 if (!fs.existsSync('./dist')) {
   fs.mkdirSync('./dist', 0744);
-}
-
-if (!fs.existsSync('./dist/assets')) {
   fs.mkdirSync('./dist/assets', 0744);
 }
 
